@@ -30,9 +30,9 @@ export default function Index() {
 
   return (
     <div>
-      {projects.map((project) => (
-        <Link to={project.slug} key={project.slug}>{project.title}</Link>
-      ))}
+      <ul>{projects.map((project) => (
+        <li key={project.slug}><Link to={project.slug}>{project.title}</Link></li>
+      ))}</ul>
 
       <Form method="post">
         <input name="title" />
